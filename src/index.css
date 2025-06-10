@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    color-scheme: dark;
+    @apply bg-zinc-950;
+    @apply text-zinc-50;
+    font-family: "Inter Variable", sans-serif;
+  }
+}
