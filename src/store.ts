@@ -26,6 +26,7 @@ interface TransactionStore {
   transactions: Transaction[];
   addIncome: (income: Omit<Income, "id">) => void;
   addExpense: (expense: Omit<Expense, "id">) => void;
+  cleanTransactions: () => void;
 }
 
 export const useStore = create<TransactionStore>()(
@@ -55,6 +56,13 @@ export const useStore = create<TransactionStore>()(
             ...state.transactions,
             { id: crypto.randomUUID(), move: "expense", object: expense },
           ] as Transaction[],
+        })),
+      cleanTransactions: () =>
+        set(() => ({
+          balance: 0,
+          incomes: [],
+          expenses: [],
+          transactions: [],
         })),
     }),
     {

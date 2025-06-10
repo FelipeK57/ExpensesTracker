@@ -30,7 +30,7 @@ export const AddIncome = () => {
     <div className="w-full">
       <button
         onClick={() => setIsOpen(true)}
-        className="flex justify-center items-center w-full gap-2 border-1 border-zinc-800 bg-zinc-950 hover:bg-zinc-700 transition-colors rounded-lg px-4 text-sm py-2"
+        className="flex justify-center items-center w-full gap-2 border-1 border-zinc-800 bg-zinc-950 hover:bg-zinc-900 cursor-pointer transition-colors rounded-lg px-4 text-sm py-2"
       >
         Nuevo Ingreso
       </button>
@@ -47,7 +47,7 @@ export const AddIncome = () => {
                 <h2 className="text-lg font-semibold">Nuevo Ingreso</h2>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="text-zinc-400 text-sm hover:text-zinc-200"
+                  className="text-zinc-400 text-lg hover:text-zinc-200 cursor-pointer"
                 >
                   ✕
                 </button>

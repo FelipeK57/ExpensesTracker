@@ -7,9 +7,6 @@ export const History = () => {
 
   return (
     <div className="flex flex-col gap-2 h-full overflow-y-auto">
-      <h2 className="text-sm font-light text-zinc-400">
-        Historial de movimientos
-      </h2>
       {transactions.map((transaction) =>
         transaction.move === "income" ? (
           <IncomeCard key={transaction.id} income={transaction.object} />
