@@ -37,7 +37,7 @@ export const App = () => {
           Ingresos
         </option>
         <option className="w-full p-2 bg-zinc-900" value="expense">
-          Egresos
+          Gastos
         </option>
       </select>
       <History selection={selection} />
